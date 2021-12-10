@@ -2,6 +2,7 @@ import React , {useState , useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import StarCharacter from './components/Character'
+import styled from 'styled-components';
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -16,16 +17,22 @@ useEffect(()=>{
     setCharacter(response.data)
   })
 },[])
+const StarStyle = styled.div`
+margin: 0, auto;
+background-color: 'lightrey';
+`
+
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <StarStyle>
 {
   character.map((character,index)=>{
 return <StarCharacter key = {index} info = {character} />
   })
 }
   
-
+</StarStyle>
     </div>
   );
 }
