@@ -6,7 +6,7 @@ const StyleInfo = styled.h2`
 display:flex;
 flex-direction: column;
 font-size:40px;
-color: 'royalblue';
+
 `
     
 
